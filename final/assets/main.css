@@ -19,7 +19,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100vh;
     overflow: hidden;
     background-color: #a31d35;
@@ -202,7 +203,6 @@ html, body {
     right: 50%;
 }
 
-/* Modal */
 .modal {
     position: fixed;
     top: 0;
@@ -220,7 +220,8 @@ html, body {
 }
 
 .modal-content {
-    width: 100%;
+    width: 40%;
+    /* Alterado para 40% */
 }
 
 .close {
@@ -245,11 +246,34 @@ button {
     margin: 0 auto;
 }
 
+/* Estilos para os campos de entrada */
+.input-group.input-group-small {
+    width: 100%;
+    /* Define a largura total do container dos campos */
+    margin-bottom: 10px;
+    /* Adiciona um espaço entre os campos */
+}
+
+.input-group.input-group-small input {
+    width: 100%;
+    /* Ajusta a largura dos campos de entrada para 100% */
+    box-sizing: border-box;
+    /* Garante que a largura inclua o padding e a borda */
+}
+
+/* Estilos para campos específicos */
+.input-group.input-group-small#nameInput,
+.input-group.input-group-small#emailInput,
+.input-group.input-group-small#cpfInput {
+    width: 250px;
+    /* Define a largura específica para os campos com IDs correspondentes */
+}
+
 /* Responsividade */
 @media only screen and (max-width: 480px) {
     .img img {
-        width: 100%;
-        max-width: 100%;
+        width: 70%;
+        max-width: 70%;
         height: auto;
         margin-left: auto;
         margin-right: auto;
@@ -346,14 +370,20 @@ button {
 
     .text {
         margin: 0;
+        color: white;
     }
 
     .text p {
         display: none;
+        color: white;
     }
 
     .text h2 {
         margin: .2rem;
         font-size: 1.5rem;
+    }
+    .text p span,
+    .text p b {
+        color:white;
     }
 }

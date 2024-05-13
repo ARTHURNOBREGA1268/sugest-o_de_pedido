@@ -5,7 +5,7 @@ $host = "localhost";
 $port = "5432";
 $dbname = "polybalas"; // Nome do banco de dados
 $user = "postgres";
-$password = "1234mud"; // Senha do banco de dados
+$password = "root1234"; // Senha do banco de dados
 
 try {
     // Tentativa de conexão
@@ -14,8 +14,9 @@ try {
     // Define para que o PDO lance exceções em caso de erro
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    echo "Conexão efetuada com sucesso!";
+    // Conexão estabelecida com sucesso, sem mensagem
 } catch(PDOException $e) {
-    die("Erro na conexão: " . $e->getMessage());
+    // Erro na conexão, sem mensagem
+    die();
 }
 ?>

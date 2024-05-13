@@ -1,0 +1,17 @@
+-- Table: public.pcusuario
+
+-- DROP TABLE IF EXISTS public.pcusuario;
+
+CREATE TABLE IF NOT EXISTS public.pcusuario
+(
+    nome character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    cpf character varying(14) COLLATE pg_catalog."default" NOT NULL,
+    senha character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT pcusuario_pkey PRIMARY KEY (cpf)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.pcusuario
+    OWNER to postgres;
